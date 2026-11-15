@@ -1,0 +1,479 @@
+/* ==========================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ================================---------- */
+:root {
+  --fondo-oscuro: #0f0f11;
+  --fondo-tarjeta: #18181c;
+  --dorado: #d4af37;
+  --dorado-claro: #f3e5ab;
+  --rojo: #e50914;
+  --rojo-claro: #ff2a2a;
+  --texto-principal: #f5f5f7;
+  --texto-secundario: #a1a1a6;
+  --borde-color: #2c2c30;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--fondo-oscuro);
+  color: var(--texto-principal);
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ==========================================
+   2. HEADER Y NAVEGACIÓN
+   ================================---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 17, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--borde-color);
+  padding: 10px 0;
+}
+
+.contenedor-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+}
+
+.imagen-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.texto-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dorado);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.enlaces-navegacion {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.enlaces-navegacion a {
+  color: var(--texto-principal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.enlaces-navegacion a:hover {
+  color: var(--dorado);
+}
+
+/* ==========================================
+   3. PORTADA / HERO
+   ================================---------- */
+.portada {
+  padding: 100px 0 80px;
+  text-align: center;
+  background: radial-gradient(circle at center, #231d10 0%, var(--fondo-oscuro) 70%);
+}
+
+.portada h1 {
+  font-size: 3rem;
+  color: var(--dorado);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.portada p {
+  font-size: 1.2rem;
+  color: var(--texto-secundario);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.boton-principal {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--rojo);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+  background-color: var(--rojo-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+}
+
+/* ==========================================
+   4. TÍTULOS DE SECCIÓN Y TARJETAS GENERALES
+   ================================---------- */
+/* --- Estilos de Secciones Grandes para Servicios --- */
+.servicios {
+  padding: 80px 0;
+  background-color: var(--fondo-tarjeta);
+  border-top: 1px solid var(--borde-color);
+  border-bottom: 1px solid var(--borde-color);
+}
+
+.cuadricula-servicios {
+  display: flex;
+  flex-direction: column; /* Apila cada servicio a lo ancho de la pantalla */
+  gap: 40px;
+}
+
+.caja-servicio {
+  position: relative;
+  padding: 80px 50px;     /* Gran espacio interno */
+  min-height: 300px;      /* Mucho más altas e imponentes */
+  border-radius: 12px;
+  border: 1px solid var(--borde-color);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Capa oscura con degradado sutil para que la foto se aprecie mejor */
+.caja-servicio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 17, 0.78);
+  z-index: 1;
+}
+
+.caja-servicio h4,
+.caja-servicio p,
+.caja-servicio .boton-servicio {
+  position: relative;
+  z-index: 2;
+}
+
+.caja-servicio h4 {
+  color: var(--dorado);
+  margin-bottom: 20px;
+  font-size: 2.2rem;      /* Título grande */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.caja-servicio p {
+  color: var(--texto-principal);
+  font-size: 1.2rem;      /* Texto descriptivo más grande */
+  max-width: 750px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.boton-servicio {
+  display: inline-block;
+  padding: 14px 35px;
+  background-color: var(--rojo);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.boton-servicio:hover {
+  background-color: var(--rojo-claro);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.45);
+}
+
+.caja-servicio:hover {
+  transform: translateY(-5px);
+  border-color: var(--dorado);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+}
+
+/* Ajuste para pantallas de celulares */
+@media (max-width: 768px) {
+  .caja-servicio {
+    padding: 50px 25px;
+    min-height: 300px;
+  }
+  .caja-servicio h4 {
+    font-size: 1.7rem;
+  }
+  .caja-servicio p {
+    font-size: 1.05rem;
+  }
+}
+/* ==========================================
+   6. SECCIÓN DE CONTACTO Y FORMULARIO
+   ================================---------- */
+.contacto {
+  padding: 60px 0;
+  min-height: 70vh;
+}
+.mapa-contenedor {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--borde-color);
+}
+.contacto-foto {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--borde-color);
+}
+
+.contacto-foto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.mapa-contenedor iframe {
+  width: 100%;
+  height: 250px;
+  border: 0;
+  display: block;
+}
+.contacto-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.contacto-info,
+.contacto-formulario {
+  flex: 1 1 350px;
+  max-width: none;
+  margin: 0;
+  background: var(--fondo-tarjeta);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--borde-color);
+  color: var(--texto-principal);
+  text-align: left;
+}
+
+.contacto-info h3,
+.contacto-formulario h3 {
+  color: var(--dorado);
+  margin-bottom: 20px;
+}
+
+.contacto-info p {
+  margin-bottom: 15px;
+  color: var(--texto-secundario);
+  font-size: 1.1rem;
+}
+
+.contacto-info a {
+  color: var(--dorado);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto-formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.campo-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--texto-principal);
+}
+
+.campo-form input,
+.campo-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  background: var(--fondo-oscuro);
+  border: 1px solid var(--borde-color);
+  color: var(--texto-principal);
+  border-radius: 5px;
+}
+
+.campo-form input:focus,
+.campo-form textarea:focus {
+  border-color: var(--dorado);
+  outline: none;
+}
+
+.contacto-formulario button[type="submit"] {
+  background-color: var(--dorado);
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contacto-formulario button[type="submit"]:hover {
+  background-color: var(--dorado-claro);
+}
+
+/* ==========================================
+   7. SECCIÓN DE CATÁLOGO Y FILTROS LATERALES
+   ================================---------- */
+.catalogo {
+  padding: 80px 0;
+  background-color: var(--fondo-oscuro);
+}
+
+.catalogo-layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+
+.sidebar-filtros {
+  width: 280px;
+  flex-shrink: 0;
+  background-color: var(--fondo-tarjeta);
+  border: 1px solid var(--borde-color);
+  border-radius: 8px;
+  padding: 20px;
+  position: sticky;
+  top: 90px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--borde-color) var(--fondo-oscuro);
+}
+
+.sidebar-filtros::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.sidebar-filtros::-webkit-scrollbar-track {
+  background: var(--fondo-oscuro);
+  border-radius: 4px;
+}
+
+.sidebar-filtros::-webkit-scrollbar-thumb {
+  background: var(--borde-color);
+  border-radius: 4px;
+}
+
+.sidebar-filtros::-webkit-scrollbar-thumb:hover {
+  background: var(--dorado);
+}
+
+
+.sidebar-filtros h3 {
+  color: var(--dorado);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--borde-color);
+  padding-bottom: 10px;
+}
+
+.grupo-filtro {
+  margin-bottom: 20px;
+}
+
+.grupo-filtro label {
+  display: block;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.grupo-filtro select {
+  width: 100%;
+  padding: 10px;
+  background: var(--fondo-oscuro);
+  border: 1px solid var(--borde-color);
+  color: var(--texto-principal);
+  border-radius: 5px;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.marca-checkbox {
+  background: var(--fondo-oscuro);
+  border: 1px solid var(--borde-color);
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: var(--texto-principal);
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.marca-checkbox input {
+  accent-color: var(--dorado);
+}
+
+.catalogo-contenido {
+  flex-grow: 1;
+}
+
+/* ==========================================
+   8. FOOTER Y RESPONSIVE (MÓVIL)
+   ================================---------- */
+footer {
+  background-color: #08080a;
+  padding: 25px 0;
+  text-align: center;
+  color: var(--texto-secundario);
+  border-top: 1px solid var(--borde-color);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .catalogo-layout {
+    flex-direction: column;
+  }
+  .sidebar-filtros {
+    width: 100%;
+  }
+}
