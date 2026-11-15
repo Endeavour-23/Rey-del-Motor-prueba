@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - El Rey del Motor BQTO C.A.</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="imagenes/logo_Rey_del_motor.png">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="contenedor contenedor-navegacion">
+      <a href="index.html" class="contenedor-logo">
+        <img src="imagenes/logo_Rey_del_motor.png" alt="Logo El Rey del Motor BQTO" class="imagen-logo">
+        <span class="texto-logo">EL REY DEL MOTOR</span>
+      </a>
+      <ul class="enlaces-navegacion">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html" style="color: var(--dorado);">Catálogo</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contactos.html">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- SECCIÓN DE CATÁLOGO CON FILTROS LATERALES -->
+  <section class="catalogo">
+    <div class="contenedor">
+      <h2 class="titulo-seccion">Catálogo de Productos</h2>
+      
+      <div class="catalogo-layout">
+        
+        <!-- BARRA LATERAL DE FILTROS (Izquierda) -->
+        <aside class="sidebar-filtros">
+          <h3>Filtrar por</h3>
+
+          <!-- Ordenar por precio -->
+          <div class="grupo-filtro">
+            <label for="orden-precio">Ordenar por precio:</label>
+            <select id="orden-precio">
+              <option value="recientes">Más recientes</option>
+              <option value="menor-mayor">Menor a Mayor Precio</option>
+              <option value="mayor-menor">Mayor a Menor Precio</option>
+            </select>
+          </div>
+
+          <!-- Filtro por Marcas -->
+          <div class="grupo-filtro">
+            <label>Marcas:</label>
+            <div class="marcas-grid">
+              <label class="marca-checkbox"><input type="checkbox"> Toyota</label>
+              <label class="marca-checkbox"><input type="checkbox"> Ford</label>
+              <label class="marca-checkbox"><input type="checkbox"> Chevrolet</label>
+              <label class="marca-checkbox"><input type="checkbox"> Nissan</label>
+              <label class="marca-checkbox"><input type="checkbox"> Hyundai</label>
+              <label class="marca-checkbox"><input type="checkbox"> Mitsubishi</label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- CUADRÍCULA DE PRODUCTOS (Derecha) -->
+        <div class="catalogo-contenido">
+          <div class="cuadricula">
+            
+            <!-- Tarjeta 1 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Ford Triton 5.4L</h3>
+                <p>Compatible con modelos de camionetas y camiones pesados Ford.</p>
+              </div>
+              <div>
+                <div class="precio">$1,699.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Ford%20Triton%205.4L" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Chevrolet 350 Vortec</h3>
+                <p>Alto rendimiento y durabilidad garantizada para vehículos Chevrolet.</p>
+              </div>
+              <div>
+                <div class="precio">$1,850.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Chevrolet%20350%20Vortec" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Toyota Hilux 2.7 (2TR)</h3>
+                <p>Repuesto original importado en excelente estado para camionetas Toyota.</p>
+              </div>
+              <div>
+                <div class="precio">$2,100.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Toyota%20Hilux%202.7" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Nissan Sentra 1.6 (GA16)</h3>
+                <p>Económico, confiable y de fácil mantenimiento para vehículos sedán.</p>
+              </div>
+              <div>
+                <div class="precio">$950.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Nissan%20Sentra%201.6" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 5 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Chevrolet Corsa 1.6</h3>
+                <p>Ideal para optimizar la potencia y eficiencia de tu vehículo compacto.</p>
+              </div>
+              <div>
+                <div class="precio">$800.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Chevrolet%20Corsa%201.6" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 6 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Ford Explorer 4.0L V6</h3>
+                <p>Potencia pura para SUVs y camionetas de gran tracción.</p>
+              </div>
+              <div>
+                <div class="precio">$1,450.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Ford%20Explorer%204.0L" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 7 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Toyota Machito 4.5 (1FZ)</h3>
+                <p>Máxima resistencia para trabajo pesado y terrenos difíciles.</p>
+              </div>
+              <div>
+                <div class="precio">$2,800.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Toyota%20Machito%204.5" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 8 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Mitsubishi Lancer 2.0 (4G63)</h3>
+                <p>Excelente respuesta y rendimiento comprobado.</p>
+              </div>
+              <div>
+                <div class="precio">$1,100.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Mitsubishi%20Lancer%202.0" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 9 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Hyundai Accent 1.5</h3>
+                <p>Excelente opción económica para vehículos livianos y taxis.</p>
+              </div>
+              <div>
+                <div class="precio">$750.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Hyundai%20Accent%201.5" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 10 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Chevrolet Silverado 5.3L</h3>
+                <p>Tecnología Vortec de alta potencia para camionetas de carga.</p>
+              </div>
+              <div>
+                <div class="precio">$2,300.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Chevrolet%20Silverado%205.3L" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 11 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Ford Fiesta Power 1.6</h3>
+                <p>Compacto, dinámico y de bajo consumo de combustible.</p>
+              </div>
+              <div>
+                <div class="precio">$850.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Ford%20Fiesta%20Power%201.6" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 12 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Toyota Corolla 1.8 (1ZZ)</h3>
+                <p>Suavidad y durabilidad legendaria para vehículos sedán.</p>
+              </div>
+              <div>
+                <div class="precio">$1,250.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Toyota%20Corolla%201.8" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 13 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Nissan Patrol 4.8</h3>
+                <p>Fuerza descomunal para vehículos todoterreno extremos.</p>
+              </div>
+              <div>
+                <div class="precio">$2,600.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Nissan%20Patrol%204.8" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 14 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Jeep Cherokee Liberty 3.7L</h3>
+                <p>Diseñado para un óptimo rendimiento en ciudad y carretera.</p>
+              </div>
+              <div>
+                <div class="precio">$1,500.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Jeep%20Cherokee%203.7L" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 15 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Chevrolet Spark 1.0</h3>
+                <p>Ultra económico y eficiente para transporte urbano diario.</p>
+              </div>
+              <div>
+                <div class="precio">$650.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Chevrolet%20Spark%201.0" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 16 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Ford 300 (6 Cilindros)</h3>
+                <p>El clásico motor indestructible para camiones y camionetas antiguas.</p>
+              </div>
+              <div>
+                <div class="precio">$1,150.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Ford%20300" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 17 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Mitsubishi Montero 3.5L V6</h3>
+                <p>Estabilidad y fuerza para camionetas 4x4 exigentes.</p>
+              </div>
+              <div>
+                <div class="precio">$1,900.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Mitsubishi%20Montero%203.5L" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 18 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Hyundai Elantra 2.0</h3>
+                <p>Repuesto confiable con excelente respuesta de aceleración.</p>
+              </div>
+              <div>
+                <div class="precio">$980.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Hyundai%20Elantra%202.0" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 19 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Toyota Yaris 1.5</h3>
+                <p>Compacto, moderno y con un rendimiento de combustible insuperable.</p>
+              </div>
+              <div>
+                <div class="precio">$1,050.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Toyota%20Yaris%201.5" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+            <!-- Tarjeta 20 -->
+            <div class="tarjeta">
+              <div>
+                <h3>Motor Nissan Frontier 2.4 (KA24)</h3>
+                <p>Resistencia y durabilidad comprobada para trabajo de carga liviana.</p>
+              </div>
+              <div>
+                <div class="precio">$1,300.00</div>
+                <a href="https://wa.me/584220336783?text=Hola,%20estoy%20interesado%20en%20el%20Motor%20Nissan%20Frontier%202.4" target="_blank" class="boton-principal boton-comprar">Consultar Precio</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2026 El Rey del Motor BQTO C.A. - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html> 
