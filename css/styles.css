@@ -449,7 +449,7 @@ header {
   margin-bottom: 14px;
   display: block;
 }
-  
+
 @media (max-width: 850px) {
   .catalogo-layout {
     grid-template-columns: 1fr;
@@ -574,5 +574,137 @@ footer {
   }
   .sidebar-filtros {
     width: 100%;
+  }
+}
+/*  ADAPTACIÓN RESPONSIVA TELEFONO*/
+
+/* Evita desbordamientos horizontales en cualquier pantalla */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .catalogo-layout {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .catalogo-layout aside,
+  .filtros {
+    position: static;
+    max-height: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header,
+  nav,
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 15px 10px;
+  }
+
+  nav ul,
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .catalogo {
+    padding: 25px 14px;
+  }
+
+  .cuadricula {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .tarjeta {
+    padding: 18px;
+  }
+
+  .motor-img {
+    height: 200px;
+  }
+
+  .tarjeta a,
+  button,
+  .btn {
+    padding: 14px 16px;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
+}
+@media (max-width: 600px) {
+  header > div,
+  .header-contenedor,
+  .navbar,
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .logo,
+  header a:first-child,
+  header .marca {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    font-size: 1.15rem; 
+    width: 100%;
+  }
+
+  .logo img,
+  header img {
+    width: 36px;
+    height: auto;
+    flex-shrink: 0;
+  }
+  header nav,
+  header ul,
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
