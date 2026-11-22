@@ -29,9 +29,8 @@ body {
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 5px;
 }
-
 /* ==========================================
    2. HEADER Y NAVEGACIÓN
    ================================---------- */
@@ -88,7 +87,10 @@ header {
 .enlaces-navegacion a:hover {
   color: var(--dorado);
 }
-
+.titulo-seccion {
+  text-align: center;
+  padding-bottom: 1% ;
+}
 /* ==========================================
    3. PORTADA / HERO
    ================================---------- */
@@ -353,9 +355,106 @@ header {
   background-color: var(--dorado-claro);
 }
 
-/* ==========================================
-   7. SECCIÓN DE CATÁLOGO Y FILTROS LATERALES
-   ================================---------- */
+/* =========================================
+   ESTILOS DEL CATÁLOGO Y TARJETAS */
+
+.catalogo {
+  padding: 40px 20px;
+}
+
+.contenedor {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.catalogo-contenido {
+  width: 100%;
+}
+
+.cuadricula {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+.tarjeta {
+  background-color: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  border-color: #f5c518; /* Dorado de la marca */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+.tarjeta h3 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.tarjeta p {
+  color: #b0b0b0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.tarjeta .precio {
+  color: #f5c518;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.tarjeta a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #e11d23;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.tarjeta a:hover {
+  background-color: #b9151a;
+}
+
+.motor-img {
+  width: 100%;          
+  height: 190px;         
+  object-fit: cover;     
+  border-radius: 8px;  
+  border: 1px solid #2a2a2a; 
+  margin-bottom: 14px;
+  display: block;
+}
+  
+@media (max-width: 850px) {
+  .catalogo-layout {
+    grid-template-columns: 1fr;
+  }
+}
 .catalogo {
   padding: 80px 0;
   background-color: var(--fondo-oscuro);
@@ -458,7 +557,7 @@ header {
 }
 
 /* ==========================================
-   8. FOOTER Y RESPONSIVE (MÓVIL)
+   8. FOOTER
    ================================---------- */
 footer {
   background-color: #08080a;
